@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media(max-width:1017px){
+    .head {
+        position: static !important;
+    }
+}
+
+@media(max-width:736px){
+    .navigation {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:400px){
+    .navigation {
+        justify-content: space-between !important;
+    }
+
+    .navigation-list {
+        display: none !important;
+    }
+
+   .logo .logo__text {
+    font-size: 13px;
+    width: 127px;
+    }
+    .menu-burger {
+        display: block !important;
+    }
+
+    
+    .navigation {
+        flex-direction: row !important;
+    }
+    
+}
+

@@ -3,8 +3,17 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Rajdhani:300,regular,500,600,700);
-
 @import url(https://fonts.googleapis.com/css?family=Cookie:regular);
+
+
+
+@import url('media.css');
+@import url('jquery.fancybox.min.css');
+
+html {
+    
+    overflow-x: hidden;
+}
 
 body, html {
 
@@ -14,12 +23,18 @@ body, html {
 
 .head {
     margin-bottom: 100px;
+    transition: background-color 0.5s ease;
 }
 
 
 .container {
     max-width: 1180px;
     margin: 0 auto;
+}
+
+.header {
+    padding: 0 20px;
+    min-height: 100px;
 }
 
 
@@ -135,4 +150,93 @@ img {
     cursor: pointer;
     border-radius: 5px;
     
+}
+
+.sub_li {
+    position: relative;
+}
+
+.subnaviation-list {
+    position: absolute;
+    width: 0px;
+    background-color: white;
+    padding: 30px;
+    transform: scale(0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all ease;
+    border-radius: 5px;
+    top: 30px;
+}
+
+ .active.subnaviation-list {
+    position: absolute;
+    width: 140px;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    width: 140px;
+    transition: 0.3s all ease;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+}
+
+.subnaviation-list li {
+    margin-left: 0px !important;
+}
+
+/* menu-burger */
+
+
+.menu-burger span {
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    display: block;
+    background-color: black;
+}
+
+/* activeScript */
+
+.menu-burger {
+    transition: transform 0.3s ease;
+    width: 31px;
+   
+    display: none;
+}
+
+.active.menu-burger {
+    transform: scale(1.099) rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.social_links img {
+    width: 60px;
+    height: 60px;
+}
+
+/* sticky header */
+
+.sticky.head {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.5s ease;
+   
+}
+
+.active.navigation-list__links {
+    color: white;
+}
+
+.active.navigation-list__links:hover {
+    color: crimson;
 }
