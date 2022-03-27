@@ -1,6 +1,18 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@media(max-width:1352px){
+    .active.subnaviation-list {
+        flex-direction: row !important;
+        width: 250px !important;
+        right: 0px;
+    }
+
+   .active.subnaviation-list li {
+        margin-left: 10px !important;
+    }
+}
+
 @media(max-width:1017px){
     .head {
         position: static !important;
@@ -14,6 +26,20 @@
 
     .logo {
         margin-bottom: 20px;
+    }
+
+    .active.subnaviation-list {
+        flex-direction: column !important;
+        width: 140px !important;
+        left: 2px;
+    }
+}
+
+@media(max-width:488px){
+    .active.subnaviation-list {
+        flex-direction: column !important;
+        width: 140px !important;
+        left: -30px !important;
     }
 }
 
