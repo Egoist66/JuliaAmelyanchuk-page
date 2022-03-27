@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Rajdhani:300,regular,500,600,700);
+
+@import url(https://fonts.googleapis.com/css?family=Cookie:regular);
+
+body, html {
+
+    font-family: 'Roboto';
+    width: 100%;
+}
+
+.head {
+    margin-bottom: 100px;
+}
+
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+
+
+.navigation {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__text {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list li {
+    margin-left: 30px;
+}
+
+.navigation-list__links {
+    color: black;
+    font-size: 18px;
+    transition: color 0.5s  ease;
+}
+.navigation-list__links:hover {
+    color: rgb(255, 0, 0);
+    transition: color 0.5s ease;
+}
+
+.navigation-list li:nth-child(1){
+    margin-left: 0;
+}
+
+
+.title-block {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-family: 'Cookie';
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* keyframes */
+
+.logo {
+    animation: logoText 1s linear alternate;
+}
+
+@keyframes logoText {
+
+    0% {
+        transform: translateY(-260%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* main content */
+
+
+
+.gallery {
+
+    display: flex;
+    flex-flow: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.img-box {
+    margin-left: 30px;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    will-change: contents;
+}
+
+.img-box:hover {
+    transform: scale(1.099);
+    transition: transform 0.3s ease;
+    will-change: contents;
+}
+
+.gallery-line {
+    width: 100%;
+    background-color: silver;
+    height: 1px;
+    margin-bottom: 100px;
+    padding: 0 15px;
+}
+
+img {
+    width: 220px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
