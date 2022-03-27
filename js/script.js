@@ -1,6 +1,4 @@
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
     let navigation = document.querySelector('.navigation');
@@ -18,9 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
     let burger = document.querySelector('.menu-burger');
 
 
+    // mobile popup 
+
+
+
+
+
+
+
+
+
     function activeBurger() {
 
+        let mobile_popup = document.querySelector('.mobile-popup');
+
         this.classList.toggle('active');
+        mobile_popup.classList.toggle('active');
+
+
     }
 
     function activeContact(event) {
@@ -73,6 +86,21 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', stickyHeader);
 
 
+    window.addEventListener('resize', function () {
 
-})
+        let mobile_popup = document.querySelector('.mobile-popup');
+        if (this.outerWidth >= 400) {
+            mobile_popup.classList.remove('active');
+        }
+    })
+
+
+
+
+
+
+
+
+
+});
 

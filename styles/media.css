@@ -67,3 +67,8 @@
     
 }
 
+@media(min-width:401px){
+    .mobile-popup {
+        display: none !important;
+    }
+}
