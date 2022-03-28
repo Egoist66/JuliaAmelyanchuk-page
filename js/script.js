@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         this.classList.toggle('active');
         mobile_popup.classList.toggle('active');
+        if (mobile_popup.classList.contains('active')) {
+            document.documentElement.style.overflowY = 'hidden';
+        } else {
+            document.documentElement.style.overflowY = 'scroll';
+        }
 
 
     }
@@ -40,14 +45,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let subnav_list = document.querySelector('.subnaviation-list');
 
-        console.log(event.target);
-
         if (event.target.classList.contains('sub_link')) {
             subnav_list.classList.toggle('active');
         } else {
             subnav_list.classList.remove('active');
         }
     }
+
+
 
     function stickyHeader() {
 
@@ -81,18 +86,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    function removePopup(event) {
+
+        let mobile_popup = document.querySelector('.mobile-popup');
+        if (event.target.classList.contains('mobile-popup')) {
+            mobile_popup.classList.remove('active');
+        }
+
+        if (mobile_popup.classList.contains('active')) {
+            document.documentElement.style.overflowY = 'hidden';
+        } else {
+            document.documentElement.style.overflowY = 'scroll';
+        }
+    }
+
+
     burger.addEventListener('click', activeBurger);
     document.addEventListener('click', activeContact);
     window.addEventListener('scroll', stickyHeader);
+    document.addEventListener('click', removePopup);
+
+
 
 
     window.addEventListener('resize', function () {
 
         let mobile_popup = document.querySelector('.mobile-popup');
+        let mobilesub_list = document.querySelector('.mobilesub-list');
         if (this.outerWidth >= 400) {
             mobile_popup.classList.remove('active');
+            mobilesub_list.classList.remove('active');
         }
     })
+
+
+    // *****************
+
+
+
+    let mobile_link = document.querySelector('.mobile_link');
+
+    mobile_link.addEventListener('click', function () {
+        let mobilesub_list = document.querySelector('.mobilesub-list');
+        mobilesub_list.classList.toggle('active');
+    })
+
+
+
 
 
 
